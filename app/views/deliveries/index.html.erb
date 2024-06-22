@@ -40,13 +40,13 @@
           Details
         </label>
 
-        <textarea id="details_box" name="query_details" rows="3"></textarea>
+        <textarea id="details_box" name="query_details"></textarea>
       </div>
       <div>
         <input type="hidden" name="query_arrived" value="false">
       </div>
 
-      <button>
+      <button type="submit">
         Log delivery
       </button>
     </form>
@@ -65,7 +65,7 @@
 
         <div>
         Supposed to arrive on
-          <%= a_delivery.supposed_to_arrive_on %>
+          <%= a_delivery.supposed_to_arrive_on.strftime("%Y-%m-%d") %>
         </div>
 
         <div>
@@ -76,7 +76,7 @@
           <form action="/modify_delivery/<%= a_delivery.id %>" method="post">
             <input type="hidden" name="arrived" value="true">
 
-            <button>Mark as received</button>
+            <button type="submit">Mark as received</button>
           </form>
         </div>
       </li>

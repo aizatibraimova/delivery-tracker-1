@@ -108,7 +108,7 @@
           Details
         </label>
 
-        <textarea id="details_box" name="query_details"><%= @the_delivery.details %></textarea>
+        <input type="text" id="details_box" name="query_details" value="<%= @the_delivery.details %>">
       </div>
 
       <div>
@@ -127,7 +127,7 @@
         </label>
       </div>
 
-      <button>
+      <button type="submit">
         Update delivery
       </button>
     </form>
